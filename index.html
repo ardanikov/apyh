@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pardon?</title>
+    <style>
+      * {
+        user-select: none;
+      }
+      body,
+      html {
+        background-color: black;
+        height: 100%;
+      }
+      div.text {
+        height: 100%;
+        text-align: center;
+        display: flex;
+        margin: 0;
+        align-items: center;
+        justify-content: center;
+      }
+      h1 {
+        text-align: center;
+        color: white;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 40px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        margin: 0;
+        align-items: center;
+        justify-content: center;
+      }
+      div.img {
+        display: flex;
+        margin: 0;
+        align-items: center;
+        justify-content: center;
+      }
+      img {
+        display: flex;
+        width: 50%;
+        height: 50%;
+        margin: 0;
+        align-items: center;
+        justify-content: center;
+      }
+      .imgdiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body onload="typeWriter()">
+    <div class="text">
+      <h1 id="caffea" onclick="youu()" style="display: flex"></h1>
+      <!-- <p id="demo"></p> -->
+      <h1 id="you" onclick="pardonn()" style="display: none">WILL</h1>
+      <h1 id="pardon" onclick="mee()" style="display: none">YOU</h1>
+      <h1 id="bee" onclick="myy()" style="display: none">BE</h1>
+      <h1 id="myy" onclick="gff()" style="display: none">MY</h1>
+      <h1 id="gf" onclick="awww()" style="display: none; color: pink">GIRLFRIEND ?</h1>
+      <div class="imgdiv">
+        <img src="img.png" id="aww" style="display: none" alt="pweasee" />
+        <p id="nvm" style="display: none; font-size: 15px; color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; position: absolute; bottom: 0">*i got a bad feeling about this</p>
+      </div>
+    </div>
+  </body>
+  <script>
+    var i = 0;
+    var txt = "Caffea Aidah Kusnun Dayana";
+    var speed = 100;
+    var caffea = document.getElementById("caffea"),
+      you = document.getElementById("you"),
+      pardon = document.getElementById("pardon"),
+      be = document.getElementById("bee"),
+      aww = document.getElementById("aww"),
+      be = document.getElementById("bee"),
+      my = document.getElementById("myy"),
+      gf = document.getElementById("gf"),
+      nvm = document.getElementById("nvm");
+
+    function typeWriter() {
+      if (i < txt.length) {
+        document.getElementById("caffea").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+      return;
+    }
+    async function youu() {
+      await typeWriter();
+      caffea.style.display = "none";
+      you.style.display = "flex";
+    }
+    function pardonn() {
+      you.style.display = "none";
+      pardon.style.display = "flex";
+    }
+    function mee() {
+      pardon.style.display = "none";
+      be.style.display = "flex";
+    }
+    function myy() {
+      be.style.display = "none";
+      my.style.display = "flex";
+    }
+    function gff() {
+      my.style.display = "none";
+      gf.style.display = "flex";
+    }
+    function awww() {
+      gf.style.display = "none";
+      aww.style.display = "flex";
+      nvm.style.display = "flex";
+    }
+  </script>
+</html>
